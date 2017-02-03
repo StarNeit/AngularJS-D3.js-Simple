@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title> The SEO Opportunity Pipeline </title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<svg width="100%" height="99%">
+			<text id="title" >The SEO Opportunity Pipeline</text>
+
+			<defs> <linearGradient id="roundRectGradientSelected"> </linearGradient> </defs>
+			<defs> <linearGradient id="roundRectGradientUnselected"> </linearGradient> </defs>
+			<defs> <radialGradient id="radialGradientSelected"> </radialGradient> </defs>
+			<defs> <radialGradient id="radialGradientUnselected"> </radialGradient> </defs>
+			<defs> <linearGradient id="ellipseGradient"> </linearGradient> </defs>
+
+			<g ng-click="changeSelection(0)"> <rect id="roundRect1" fill="{{roundRectFill[0]}}" style="stroke: {{roundRectBorder[0]}}; stroke-width: 0.3%;"> </rect> <text id="txtRoundRect1">{{texts[0][0]}}</text> </g>
+			<g ng-click="changeSelection(1)"> <rect id="roundRect2" fill="{{roundRectFill[1]}}" style="stroke: {{roundRectBorder[1]}}; stroke-width: 0.3%;"> </rect> <text id="txtRoundRect2">{{texts[0][1]}}</text> </g>
+			<g ng-click="changeSelection(2)"> <rect id="roundRect3" fill="{{roundRectFill[2]}}" style="stroke: {{roundRectBorder[2]}}; stroke-width: 0.3%;"> </rect> <text id="txtRoundRect3">{{texts[0][2]}}</text> </g>
+			<g ng-click="changeSelection(3)"> <rect id="roundRect4" fill="{{roundRectFill[3]}}" style="stroke: {{roundRectBorder[3]}}; stroke-width: 0.3%;"> </rect> <text id="txtRoundRect4">{{texts[0][3]}}</text> </g>
+			<g ng-click="changeSelection(4)"> <rect id="roundRect5" fill="{{roundRectFill[4]}}" style="stroke: {{roundRectBorder[4]}}; stroke-width: 0.3%;"> </rect> <text id="txtRoundRect5">{{texts[0][4]}}</text> </g>
+
+			<text id="txtLeftBottom1">Probability of pages at</text>
+			<text id="txtLeftBottom2">each stage leading to sales</text>
+			<text id="txtRightBottom">Unclaimed SEO Revenue</text>
+
+		</svg>
+
+		<svg id="horzArrow1" fill="{{horzArrowFill[0]}}"> <polygon style="stroke: {{horzArrowBorder[0]}};"> </polygon> </svg>
+		<svg id="horzArrow2" fill="{{horzArrowFill[1]}}"> <polygon style="stroke: {{horzArrowBorder[1]}};"> </polygon> </svg>
+		<svg id="horzArrow3" fill="{{horzArrowFill[2]}}"> <polygon style="stroke: {{horzArrowBorder[2]}};"> </polygon> </svg>
+		<svg id="horzArrow4" fill="{{horzArrowFill[3]}}"> <polygon style="stroke: {{horzArrowBorder[3]}};"> </polygon> </svg>
+
+		<svg id="vertArrow1" fill="{{arrowFill[0]}}"> <polygon style="stroke: {{arrowBorder[0]}}; stroke-width: 5%;"> </polygon> </svg>
+		<svg id="vertArrow2" fill="{{arrowFill[1]}}"> <polygon style="stroke: {{arrowBorder[1]}}; stroke-width: 5%;"> </polygon> </svg>
+		<svg id="vertArrow3" fill="{{arrowFill[2]}}"> <polygon style="stroke: {{arrowBorder[2]}}; stroke-width: 5%;"> </polygon> </svg>
+		<svg id="vertArrow4" fill="{{arrowFill[3]}}"> <polygon style="stroke: {{arrowBorder[3]}}; stroke-width: 5%;"> </polygon> </svg>
+
+		<svg id="cyllinder1" fill="{{roundRectFill[0]}}" ng-click="changeSelection(0)" viewBox="0 0 260 205"> 
+			<path style="stroke: {{cyllinderBorder[0]}};"> </path> 
+			<text id="txtPercent1">{{texts[3][0]}}</text> 
+			<text id="txtNumber1">{{texts[4][0]}}</text>
+		</svg>
+		
+		<svg id="cyllinder2" fill="{{roundRectFill[1]}}" ng-click="changeSelection(1)" viewBox="0 0 225 155"> 
+			<path style="stroke: {{cyllinderBorder[1]}};"> </path> 
+			<text id="txtPercent2">{{texts[3][1]}}</text> 
+			<text id="txtNumber2">{{texts[4][1]}}</text>
+		</svg>
+
+		<svg id="cyllinder3" fill="{{roundRectFill[2]}}" ng-click="changeSelection(2)" viewBox="0 0 290 115"> 
+			<path style="stroke: {{cyllinderBorder[2]}};"> </path> 
+			<text id="txtPercent3">{{texts[3][2]}}</text> 
+		</svg>
+
+		<svg id="cyllinder4" fill="{{roundRectFill[3]}}" ng-click="changeSelection(3)" viewBox="0 0 250 55"> 
+			<path style="stroke: {{cyllinderBorder[3]}};"> </path> 
+			<text id="txtPercent4">{{texts[3][3]}}</text> 
+		</svg>
+
+		<svg id="diagArrow1" fill="{{arrowFill[0]}}"> <polygon style="stroke: {{arrowBorder[0]}}; stroke-width: 3%;"> </polygon> </svg>
+		<svg id="diagArrow2" fill="{{arrowFill[1]}}"> <polygon style="stroke: {{arrowBorder[1]}}; stroke-width: 3%;"> </polygon> </svg>
+		<svg id="diagArrow3" fill="{{arrowFill[2]}}"> <polygon style="stroke: {{arrowBorder[2]}}; stroke-width: 3%;"> </polygon> </svg>
+		<svg id="diagArrow4" fill="{{arrowFill[3]}}"> <polygon style="stroke: {{arrowBorder[3]}}; stroke-width: 3%;"> </polygon> </svg>
+		<svg id="diagArrow5" fill="{{arrowFill[4]}}"> <polygon style="stroke: {{arrowBorder[4]}}; stroke-width: 3%;"> </polygon> </svg>
+
+		<svg id="polygon1" fill="{{polygonFill[0]}}" ng-click="changeSelection(0)"> 
+			<polygon style="stroke: {{polygonBorder[0]}}; stroke-width: 1.5%"> </polygon> 
+			<text id="txtValue1">{{texts[1][0]}}</text> 
+			<text id="txtMoney1">{{texts[2][0]}}</text>
+		</svg>
+
+		<svg id="polygon2" fill="{{polygonFill[1]}}" ng-click="changeSelection(1)"> 
+			<polygon style="stroke: {{polygonBorder[1]}}; stroke-width: 1.5%"> </polygon> 
+			<text id="txtValue2">{{texts[1][1]}}</text> 
+			<text id="txtMoney2">{{texts[2][1]}}</text>
+		</svg>
+
+		<svg id="polygon3" fill="{{polygonFill[2]}}" ng-click="changeSelection(2)"> 
+			<polygon style="stroke: {{polygonBorder[2]}}; stroke-width: 1.5%"> </polygon> 
+			<text id="txtValue3">{{texts[1][2]}}</text> 
+			<text id="txtMoney3">{{texts[2][2]}}</text>
+		</svg>
+		<svg id="polygon4" fill="{{polygonFill[3]}}" ng-click="changeSelection(3)"> 
+			<polygon style="stroke: {{polygonBorder[3]}}; stroke-width: 1.5%"> </polygon> 
+			<text id="txtValue4">{{texts[1][3]}}</text> 
+			<text id="txtMoney4">{{texts[2][3]}}</text>
+		</svg>
+
+		<svg id="polygon5" fill="{{polygonFill[4]}}" ng-click="changeSelection(4)"> 
+			<polygon style="stroke: {{polygonBorder[4]}}; stroke-width: 1.5%"> </polygon> 
+			<text id="txtMoney5">{{texts[2][4]}}</text>
+		</svg>
+
+		<svg id="reDiagArrow" fill="{{arrowFill[4]}}"> <polygon style="stroke: {{arrowBorder[4]}}; stroke-width: 5%;"> </polygon> </svg>
+
+		<svg id="ellipse"> <ellipse> </ellipse> </svg>
+
+		<img id="tap"/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="js/angularcode.js"></script>
+		<script src="js/configs.js"></script>
+		<script src="js/values.js"></script>
+		<script src="js/d3code.js"></script>
+
+		<script>
+			
+		</script>
+	</body>
+</html>
